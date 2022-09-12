@@ -82,16 +82,18 @@ bool Ship::first_than(const Ship &ship){
         return true;
     }
     else if(month > ship.month){
+            return false;
+        }
+
+    else{
         if(day < ship.day){
             return true;
         }
-        else if(day > ship.day){
+        else if (day > ship.day){
             return false;
         }
-    else{
-    return false;
     }
-
+    return false;
 }
 
 #endif //SHIP_H_

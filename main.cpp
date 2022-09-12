@@ -48,7 +48,7 @@ int main(int argc, char* argv[]) {
 
 	//We fill the vector with ships from the file
 	for (int i=0; i<num; i++){
-		input >> date, time, entry, ubi;
+		input >> date >> time >> entry >> ubi;
 		ships[i] = Ship(date, time, entry, ubi);
 	}
 	
@@ -64,15 +64,15 @@ int main(int argc, char* argv[]) {
 			mysolution << setfill('0');
 			mysolution << setw(2) << ships[i].day << "-";
 			mysolution << setw(2) << ships[i].month << "-";
-			mysolution << setw(2) << ships[i].year << "-";
-			mysolution << setw(2) << ships[i].hour << "-";
-			mysolution << setw(2) << ships[i].minute << "-";
-			mysolution << ships[i].entry <<" " << ships[i].ubi;
+			mysolution << setw(2) << ships[i].year << " ";
+			mysolution << setw(2) << ships[i].hour << ":";
+			mysolution << setw(2) << ships[i].minute << " ";
+			mysolution << ships[i].entry <<" " << ships[i].ubi << "\n";
 		}
 	}
 	
 	input.close();
 	mysolution.close();
-	
-  return 0;
+
+	return 0;
 }

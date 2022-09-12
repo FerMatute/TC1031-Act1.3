@@ -16,7 +16,7 @@ void selectionSort(vector<Ship> &ships) {
 	for(int i = ships.size() - 1; i > 0; i--){
 		pos = 0;
 		for(int j = 1; j <= i; j++){
-			if(ships[j].first_than(ships[pos])){ //Cambiar a la comparacion de los barcos first_than
+			if(ships[pos].first_than(ships[j])){ //Cambiar a la comparacion de los barcos first_than
 				pos = j;
 			}
 		}
